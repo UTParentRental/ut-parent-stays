@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UT Parent Stays</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    header, nav, main, footer { padding: 20px; }
+    header { background-color: #FF8200; color: white; text-align: center; }
+    nav { background-color: #333; color: white; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 10px; }
+    nav a:hover { background-color: #555; }
+    section { padding: 20px; display: none; }
+    section.active { display: block; }
+    footer { background-color: #f4f4f4; text-align: center; font-size: 0.9em; }
+    .ut-image { max-width: 100%; height: auto; margin-top: 15px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to UT Parent Stays</h1>
+    <p>Affordable, comfortable stays for University of Tennessee families</p>
+  </header>
+  
+  <nav>
+    <a href="#" onclick="showTab('about')">About Us</a>
+    <a href="#" onclick="showTab('units')">Unit Information</a>
+    <a href="#" onclick="showTab('rules')">House Rules</a>
+    <a href="#" onclick="showTab('booking')">Booking Info</a>
+    <a href="#" onclick="showTab('contact')">Contact Us</a>
+  </nav>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Us</h2>
+      <p>I'm Kim Brothers, a mom of four. We moved to Knoxville in 2011 after my husband retired from the NYPD. With kids attending the University of Alabama and now UT, we experienced firsthand how hard it can be to find decent lodging during game weekends. That inspired us to start hosting UT parents in our kids' apartments — making travel easier and more affordable while helping them cover expenses.</p>
+      <img class="ut-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Tennessee_Vols_football_game.jpg" alt="UT Football Stadium">
+    </section>
+
+    <section id="units">
+      <h2>Unit Information</h2>
+      <p>Both apartments are located in the Londontown complex, 10 minutes west of campus in a safe, convenient area.</p>
+
+      <h3>Katie’s Place</h3>
+      <ul>
+        <li>2BR (1 queen, 1 full), 2BA</li>
+        <li>Second-floor unit with deck</li>
+        <li>Spacious, stylish, and sunny</li>
+      </ul>
+      <p><a href="#">Photos here</a> | <a href="#">Listing</a></p>
+
+      <h3>Kevin’s Place</h3>
+      <ul>
+        <li>2-level townhouse, 2BR (1 king, 1 queen), 2.5BA</li>
+        <li>Decks off the dining room and master</li>
+        <li>Open, airy, and minimal</li>
+      </ul>
+      <p><a href="#">Photos here</a> | <a href="#">Listing</a></p>
+      <img class="ut-image" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Tower_at_the_University_of_Tennessee.jpg" alt="University of Tennessee Tower">
+    </section>
+
+    <section id="rules">
+      <h2>House Rules</h2>
+      <ul>
+        <li>No parties</li>
+        <li>No smoking or vaping</li>
+        <li>No pets</li>
+        <li>No student rentals unless a parent is staying</li>
+      </ul>
+    </section>
+
+    <section id="booking">
+      <h2>Booking Info</h2>
+      <ul>
+        <li>Weekends are typical, weekdays can work too</li>
+        <li>Deposit: $50–$100 to hold your spot</li>
+        <li>Flexible cancellation—just keep us in the loop</li>
+        <li>Rates: $250–$300 per night depending on events</li>
+        <li>2-night minimum, 5-night max</li>
+        <li>Payment via Venmo, CashApp, or Zelle</li>
+      </ul>
+      <p>To book: send your contact info, deposit, dates, and number of guests. Renting for a group? Book both places—they’re close together!</p>
+      <img class="ut-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/University_of_Tennessee_campus_%28Knoxville%2C_Tennessee%29.jpg" alt="UT Campus View">
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Call or text: <a href="tel:6462610789">646-261-0789</a></p>
+      <p>Email: <a href="mailto:kimbrothers@gmail.com">kimbrothers@gmail.com</a></p>
+      <p>Or message me on Facebook!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UT Parent Stays | Go Vols! 🧡</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
